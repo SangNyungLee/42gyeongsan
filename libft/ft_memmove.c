@@ -1,4 +1,4 @@
-// #include <stdio.h>
+#include <stdio.h>
 
 // void *ft_memmove(void* destination, const void* source, size_t num)
 // {
@@ -28,3 +28,32 @@
 // //     puts(str);
 // //     return (0);
 // // }
+
+void *ft_memmove(void *dest, const void *src, size_t n)
+{
+    void *ret = dest;
+
+    if(dest <= src || (char *) dest >= ((char *)src + n))
+    {
+        while (n--)
+        {
+            *(char *) dest = *(char *)src;
+            dest = (char *)dest + 1;
+            src = (char *)src + 1;
+        }
+    }
+    else
+    {
+        dest = (char *)dest + n - 1;
+        src = (char *)src + n - 1;
+
+        while (n--)
+        {
+            *(char *)dest = *(char *)src;
+            dest = (char *)dest - 1;
+            src = (char *)src - 1;
+        }
+    }
+
+    return ret;
+}
