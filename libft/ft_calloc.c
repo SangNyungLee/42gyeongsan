@@ -1,19 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isascii.c                                       :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sanglee <sanglee@student.42gyeongsan.kr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/06 13:49:50 by sanglee           #+#    #+#             */
-/*   Updated: 2024/10/06 14:38:35 by sanglee          ###   ########.fr       */
+/*   Created: 2024/10/06 16:00:21 by sanglee           #+#    #+#             */
+/*   Updated: 2024/10/06 16:33:51 by sanglee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isascii(int ch)
+#include <unistd.h>
+
+void *ft_calloc(size_t nmemb, size_t size)
 {
-	if (ch >= 0 && ch <= 127)
-		return (1);
-	else
-		return (0);
+	if (nmemb == 0 || size == 0)
+		nmemb = size = 1;
+	
 }

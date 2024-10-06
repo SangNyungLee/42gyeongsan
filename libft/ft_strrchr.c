@@ -1,26 +1,27 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: sanglee <sanglee@student.42gyeongsan.kr>   +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/10/06 14:31:53 by sanglee           #+#    #+#             */
+/*   Updated: 2024/10/06 14:40:26 by sanglee          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <stdio.h>
 
-char *ft_strrchr(const char *s, int c)
+char	*ft_strrchr(const char *s, int c)
 {
-    char *start = (char *)s;
-    while(*s++);
-    while(--s != start && *s != (char)c);
-    if (*s == (char) c)
-        return (char *)s;
-    return (NULL);
-}
+	char	*start;
 
-int main(void)
-{
-    char str[] = "BlockDMask";
-    char *ptr = ft_strrchr(str, 'M');
-    if(ptr)
-    {
-        printf("%c, %p\n", *ptr, (void *)ptr);
-    }
-    else
-    {
-        printf("Character not found\n");
-    }
-    return 0;
+	start = (char *)s;
+	while (*s++)
+		;
+	while (--s != start && *s != (char)c)
+		;
+	if (*s == (char) c)
+		return ((char *)s);
+	return (NULL);
 }

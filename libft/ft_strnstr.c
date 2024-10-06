@@ -1,19 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isascii.c                                       :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sanglee <sanglee@student.42gyeongsan.kr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/06 13:49:50 by sanglee           #+#    #+#             */
-/*   Updated: 2024/10/06 14:38:35 by sanglee          ###   ########.fr       */
+/*   Created: 2024/10/06 14:43:06 by sanglee           #+#    #+#             */
+/*   Updated: 2024/10/06 16:33:26 by sanglee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isascii(int ch)
+#include <string.h>
+
+char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
-	if (ch >= 0 && ch <= 127)
-		return (1);
-	else
-		return (0);
+	size_t	i;
+	size_t	j;
+
+	if (little[0] == '\0')
+		return ((char *)big);
+
+	j = 0;
+	while (j < len && big[j])
+	{
+		i = 0;
+		while (j + i < len && little[i] && big[j + i] == little[i])
+		{
+			i++;
+		}
+		if (little[i] == '\0')
+			return ((char *)&big[j]);
+		j++;
+	}
+	return (NULL);
 }
