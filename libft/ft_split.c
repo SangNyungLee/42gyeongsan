@@ -6,7 +6,7 @@
 /*   By: sanglee <sanglee@student.42gyeongsan.kr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 11:22:29 by sanglee           #+#    #+#             */
-/*   Updated: 2024/10/08 12:51:24 by sanglee          ###   ########.fr       */
+/*   Updated: 2024/10/08 15:18:18 by sanglee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,24 +15,101 @@
 #include <string.h>
 #include <stdlib.h>
 
-char	**ft_split(char const *s, char c)
+int	count_words(char *str, char c)
 {
-	char	*str;
-	char	**result;
-	int		len;
-	int		i;
-	int		check;
+	int	i;
+	int	count;
 
-	str = ft_strdup(s);
-	len = ft_strlen((char *)s);
 	i = 0;
-	while (str[i] != '\0' && (i < len))
+	count = 0;
+	while (str[i] != '\0')
 	{
-		if (str[i] == c)
-			str[i] = '\0';
+		if (str[i] != c)
+		{
+			count++;
+			while (str[i] != c && str[i] != '\0')
+				i++;
+		}
+		else
+			i++;
+	}
+	return (count);
+}
+
+char	*extract_word(char *s, int *i, char c)
+{
+	char	*word;
+	int		start;
+	int		length;
+
+	start = *i;
+	while (s[*i] != c && s[*i] != '\0')
+		(*i)++;
+
+	length = *i - start;
+	word = ft_substr(s, start, length);
+	if (!word)
+		return (NULL);
+	return (word);
+}
+
+void	free_memory(char **result, int idx)
+{
+	int	i;
+
+	i = 0;
+	while (i < idx)
+	{
+		free(result[i]);
 		i++;
 	}
-	result = (int **)malloc(sizeof(int *) * i);
-	i = 0;
+	free(result);
+}
 
+char	**ft_split(char const *s, char c)
+{
+	char	**result;
+	int		i;
+	int		idx;
+
+	result = (char **)malloc(sizeof(char *) * (count_words((char *)s, c) + 1));
+	if (!result)
+		return (NULL);
+	i = 0;
+	idx = 0;
+	while (s[i] != '\0')
+	{
+		if (s[i] != c)
+		{
+			result[idx++] = extract_word((char *)s, &i, c);
+			if (!result[idx - 1])
+			{
+				free_memory(result, idx);
+				return (NULL);
+			}
+		}
+		else
+			i++;
+	}
+	result[idx] = NULL;
+	return (result);
+}
+
+int	main(void)
+{
+	char	**result;
+	char	*str;
+	int		i;
+
+	str = "hello world my name is lee";
+	result = ft_split(str, ' ');
+	i = 0;
+	while (result[i] != NULL)
+	{
+		printf("result[%d]: %s\n", i, result[i]);
+		free(result[i]);
+		i++;
+	}
+	free(result);
+	return (0);
 }
