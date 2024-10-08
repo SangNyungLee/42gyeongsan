@@ -1,28 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sanglee <sanglee@student.42gyeongsan.kr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/06 16:00:21 by sanglee           #+#    #+#             */
-/*   Updated: 2024/10/07 16:26:27 by sanglee          ###   ########.fr       */
+/*   Created: 2024/10/07 15:53:28 by sanglee           #+#    #+#             */
+/*   Updated: 2024/10/07 17:02:51 by sanglee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <unistd.h>
-#include <string.h>
 #include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
 
-void	*ft_calloc(size_t nmemb, size_t size)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	unsigned int	i;
-	char			*ptr;
+	char	*ptr;
+	size_t	i;
 
-	i = nmemb * size;
-	if ((ptr = malloc(i)) == NULL)
+	i = 0;
+
+	if (!len && start >= ft_strlen((char *)s))
 		return (NULL);
-	ft_memset(ptr, 0, i);
+
+	ptr = malloc(sizeof(char) * (len + 1));
+	if (!ptr)
+		return (NULL);
+	while (i < len && s[start + i])
+	{
+		ptr[i] = s[start + i];
+		i++;
+	}
+	ptr[i] = '\0';
+
 	return (ptr);
 }
