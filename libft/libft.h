@@ -11,4 +11,6 @@ int		ft_isalpha(int ch);
 int		ft_isdigit(int ch);
 int		ft_isalnum(int ch);
 int		ft_strlen(char *str);
+char	*ft_strdup(const char *s);
+
 #endif

@@ -1,28 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sanglee <sanglee@student.42gyeongsan.kr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/06 16:57:15 by sanglee           #+#    #+#             */
-/*   Updated: 2024/10/08 11:16:01 by sanglee          ###   ########.fr       */
+/*   Created: 2024/10/08 11:22:29 by sanglee           #+#    #+#             */
+/*   Updated: 2024/10/08 12:19:11 by sanglee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-#include <unistd.h>
+#include <stdio.h>
+#include <string.h>
 #include <stdlib.h>
 
-char	*ft_strdup(const char *s)
+char	**ft_split(char const *s, char c)
 {
-	char	*t;
-	int		len;
+	char	*str;
 
-	if (!s)
-		return (NULL);
-	len = ft_strlen((char *)s);
-	t = (char *)malloc(len + 1);
-	ft_memcpy(t, s, len + 1);
-	return (t);
+	str = ft_strdup(s);
 }
