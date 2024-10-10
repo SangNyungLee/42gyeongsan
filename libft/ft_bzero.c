@@ -6,14 +6,14 @@
 /*   By: sanglee <sanglee@student.42gyeongsan.kr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/06 13:46:03 by sanglee           #+#    #+#             */
-/*   Updated: 2024/10/06 13:48:35 by sanglee          ###   ########.fr       */
+/*   Updated: 2024/10/10 15:07:55 by sanglee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdio.h>
 
-void	*ft_bzero(void *s, size_t n)
+void	ft_bzero(void *s, size_t n)
 {
 	return (ft_memset(s, 0, n));
 }

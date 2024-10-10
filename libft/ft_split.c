@@ -6,7 +6,7 @@
 /*   By: sanglee <sanglee@student.42gyeongsan.kr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 11:22:29 by sanglee           #+#    #+#             */
-/*   Updated: 2024/10/08 15:18:18 by sanglee          ###   ########.fr       */
+/*   Updated: 2024/10/10 15:15:00 by sanglee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,6 @@ char	*extract_word(char *s, int *i, char c)
 	start = *i;
 	while (s[*i] != c && s[*i] != '\0')
 		(*i)++;
-
 	length = *i - start;
 	word = ft_substr(s, start, length);
 	if (!word)

@@ -6,10 +6,11 @@
 /*   By: sanglee <sanglee@student.42gyeongsan.kr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/06 14:26:06 by sanglee           #+#    #+#             */
-/*   Updated: 2024/10/08 10:44:11 by sanglee          ###   ########.fr       */
+/*   Updated: 2024/10/10 15:13:37 by sanglee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>

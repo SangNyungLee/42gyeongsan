@@ -6,9 +6,11 @@
 /*   By: sanglee <sanglee@student.42gyeongsan.kr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/04 17:20:38 by sanglee           #+#    #+#             */
-/*   Updated: 2024/10/06 14:31:49 by sanglee          ###   ########.fr       */
+/*   Updated: 2024/10/10 15:14:18 by sanglee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_strncmp(char *s1, char *s2, unsigned int n)
 {

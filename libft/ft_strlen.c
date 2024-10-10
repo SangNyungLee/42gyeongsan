@@ -6,10 +6,11 @@
 /*   By: sanglee <sanglee@student.42gyeongsan.kr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/06 14:31:42 by sanglee           #+#    #+#             */
-/*   Updated: 2024/10/08 10:06:47 by sanglee          ###   ########.fr       */
+/*   Updated: 2024/10/10 15:14:11 by sanglee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 #include <unistd.h>
 
 int	ft_strlen(char *str)

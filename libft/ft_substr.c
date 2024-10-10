@@ -6,7 +6,7 @@
 /*   By: sanglee <sanglee@student.42gyeongsan.kr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 15:53:28 by sanglee           #+#    #+#             */
-/*   Updated: 2024/10/07 17:02:51 by sanglee          ###   ########.fr       */
+/*   Updated: 2024/10/10 15:16:26 by sanglee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	size_t	i;
 
 	i = 0;
-
 	if (!len && start >= ft_strlen((char *)s))
 		return (NULL);
-
 	ptr = malloc(sizeof(char) * (len + 1));
 	if (!ptr)
 		return (NULL);
@@ -34,6 +32,5 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		i++;
 	}
 	ptr[i] = '\0';
-
 	return (ptr);
 }

@@ -6,9 +6,11 @@
 /*   By: sanglee <sanglee@student.42gyeongsan.kr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/06 14:37:38 by sanglee           #+#    #+#             */
-/*   Updated: 2024/10/06 14:37:50 by sanglee          ###   ########.fr       */
+/*   Updated: 2024/10/10 15:14:32 by sanglee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_tolower(int c)
 {

@@ -6,10 +6,11 @@
 /*   By: sanglee <sanglee@student.42gyeongsan.kr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/06 14:28:16 by sanglee           #+#    #+#             */
-/*   Updated: 2024/10/06 14:39:39 by sanglee          ###   ########.fr       */
+/*   Updated: 2024/10/10 15:13:40 by sanglee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 #include <stdio.h>
 
 void	*ft_memmove(void *dest, const void *src, size_t n)

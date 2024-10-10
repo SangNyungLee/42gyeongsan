@@ -6,10 +6,11 @@
 /*   By: sanglee <sanglee@student.42gyeongsan.kr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/06 19:44:50 by sanglee           #+#    #+#             */
-/*   Updated: 2024/10/06 14:31:34 by sanglee          ###   ########.fr       */
+/*   Updated: 2024/10/10 15:14:05 by sanglee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 #include <stdio.h>
 
 int	check_len(char *str)

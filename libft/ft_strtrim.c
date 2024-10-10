@@ -6,7 +6,7 @@
 /*   By: sanglee <sanglee@student.42gyeongsan.kr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 09:57:03 by sanglee           #+#    #+#             */
-/*   Updated: 2024/10/08 11:21:50 by sanglee          ###   ########.fr       */
+/*   Updated: 2024/10/10 15:16:16 by sanglee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,6 @@ char	*trim_right(char *s1, char *set)
 	str = ft_strdup((const char *)s1);
 	s1_len = (int)ft_strlen(s1) - 1;
 	set_len = (int)ft_strlen(set) - 1;
-
 	while (s1_len >= 0 && set_len >= 0)
 	{
 		if (*(str + s1_len) == *(set + set_len))

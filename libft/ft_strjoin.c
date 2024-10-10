@@ -6,7 +6,7 @@
 /*   By: sanglee <sanglee@student.42gyeongsan.kr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 17:04:02 by sanglee           #+#    #+#             */
-/*   Updated: 2024/10/08 09:55:34 by sanglee          ###   ########.fr       */
+/*   Updated: 2024/10/10 15:16:37 by sanglee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,16 +58,12 @@ char	*ft_strjoin(char const *s1, char const *s2)
 
 	if (!s1 || !s2)
 		return (NULL);
-
 	i = ft_strlen((char *)s1);
 	j = ft_strlen((char *)s2);
-
 	ptr = malloc(sizeof(char) * (i + j));
 	if (!ptr)
 		return (NULL);
-
 	ft_strcpy(ptr, (char *)s1);
 	ft_strcat(ptr, (char *)s2);
-
 	return (ptr);
 }

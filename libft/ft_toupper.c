@@ -6,10 +6,11 @@
 /*   By: sanglee <sanglee@student.42gyeongsan.kr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/06 14:37:54 by sanglee           #+#    #+#             */
-/*   Updated: 2024/10/06 14:38:09 by sanglee          ###   ########.fr       */
+/*   Updated: 2024/10/10 15:14:35 by sanglee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 #include <stdio.h>
 
 int	ft_toupper(int c)

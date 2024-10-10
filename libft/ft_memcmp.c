@@ -6,10 +6,11 @@
 /*   By: sanglee <sanglee@student.42gyeongsan.kr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/06 13:11:07 by sanglee           #+#    #+#             */
-/*   Updated: 2024/10/06 14:39:18 by sanglee          ###   ########.fr       */
+/*   Updated: 2024/10/10 15:13:35 by sanglee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 #include <unistd.h>
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
