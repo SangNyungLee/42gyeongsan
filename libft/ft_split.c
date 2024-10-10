@@ -6,7 +6,7 @@
 /*   By: sanglee <sanglee@student.42gyeongsan.kr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 11:22:29 by sanglee           #+#    #+#             */
-/*   Updated: 2024/10/10 15:15:00 by sanglee          ###   ########.fr       */
+/*   Updated: 2024/10/10 16:14:16 by sanglee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,23 +92,4 @@ char	**ft_split(char const *s, char c)
 	}
 	result[idx] = NULL;
 	return (result);
-}
-
-int	main(void)
-{
-	char	**result;
-	char	*str;
-	int		i;
-
-	str = "hello world my name is lee";
-	result = ft_split(str, ' ');
-	i = 0;
-	while (result[i] != NULL)
-	{
-		printf("result[%d]: %s\n", i, result[i]);
-		free(result[i]);
-		i++;
-	}
-	free(result);
-	return (0);
 }

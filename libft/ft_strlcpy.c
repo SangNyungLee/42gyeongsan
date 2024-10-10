@@ -6,7 +6,7 @@
 /*   By: sanglee <sanglee@student.42gyeongsan.kr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/04 14:21:02 by sanglee           #+#    #+#             */
-/*   Updated: 2024/10/10 15:14:08 by sanglee          ###   ########.fr       */
+/*   Updated: 2024/10/10 15:46:26 by sanglee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,12 +24,12 @@ int	check_len(char *str)
 	return (i);
 }
 
-unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
+size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 {
 	unsigned int		i;
 	unsigned int		j;
 
-	j = check_len(src);
+	j = check_len((char *)src);
 	i = 0;
 	if (size != 0)
 	{

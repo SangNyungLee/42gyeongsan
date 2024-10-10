@@ -6,24 +6,12 @@
 /*   By: sanglee <sanglee@student.42gyeongsan.kr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 14:47:32 by sanglee           #+#    #+#             */
-/*   Updated: 2024/10/10 15:15:58 by sanglee          ###   ########.fr       */
+/*   Updated: 2024/10/10 15:50:03 by sanglee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
-
-int	ft_strlen(char *str)
-{
-	int		i;
-
-	i = 0;
-	while (str[i] != '\0')
-	{
-		i++;
-	}
-	return (i);
-}
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {

@@ -6,11 +6,12 @@
 /*   By: sanglee <sanglee@student.42gyeongsan.kr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/06 16:00:21 by sanglee           #+#    #+#             */
-/*   Updated: 2024/10/10 15:18:04 by sanglee          ###   ########.fr       */
+/*   Updated: 2024/10/10 15:47:16 by sanglee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 
 void	*ft_calloc(size_t nmemb, size_t size)
 {

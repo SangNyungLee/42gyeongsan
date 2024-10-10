@@ -6,19 +6,19 @@
 /*   By: sanglee <sanglee@student.42gyeongsan.kr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/06 14:31:42 by sanglee           #+#    #+#             */
-/*   Updated: 2024/10/10 15:14:11 by sanglee          ###   ########.fr       */
+/*   Updated: 2024/10/10 15:34:39 by sanglee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <unistd.h>
 
-int	ft_strlen(char *str)
+size_t	ft_strlen(const char *s)
 {
 	int		i;
 
 	i = 0;
-	while (str[i] != '\0')
+	while (s[i] != '\0')
 	{
 		i++;
 	}

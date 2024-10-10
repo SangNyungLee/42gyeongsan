@@ -6,7 +6,7 @@
 /*   By: sanglee <sanglee@student.42gyeongsan.kr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/06 19:44:50 by sanglee           #+#    #+#             */
-/*   Updated: 2024/10/10 15:14:05 by sanglee          ###   ########.fr       */
+/*   Updated: 2024/10/10 15:47:01 by sanglee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,14 +25,14 @@ int	check_len(char *str)
 	return (i);
 }
 
-unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
+size_t	ft_strlcat(char *dest, const char *src, size_t size)
 {
 	unsigned int		dest_len;
 	unsigned int		src_len;
 	unsigned int		i;
 
 	dest_len = check_len(dest);
-	src_len = check_len(src);
+	src_len = check_len((char *)src);
 	i = 0;
 	if (dest_len >= size)
 	{
