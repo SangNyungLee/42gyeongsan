@@ -6,7 +6,7 @@
 /*   By: sanglee <sanglee@student.42gyeongsan.kr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/06 14:26:06 by sanglee           #+#    #+#             */
-/*   Updated: 2024/10/10 15:13:37 by sanglee          ###   ########.fr       */
+/*   Updated: 2024/10/11 11:49:29 by sanglee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,5 +33,5 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	if (n)
 		return ((void *)des);
 	else
-		return (NULL);
+		return (dest);
 }
