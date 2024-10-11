@@ -6,7 +6,7 @@
 /*   By: sanglee <sanglee@student.42gyeongsan.kr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 14:47:32 by sanglee           #+#    #+#             */
-/*   Updated: 2024/10/10 15:50:03 by sanglee          ###   ########.fr       */
+/*   Updated: 2024/10/11 13:44:11 by sanglee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	str = (char *)malloc(sizeof(char) * (ft_strlen(s) + 1));
 	if (!str)
 		return (NULL);
-	while (str[i] != '\0')
+	while (s[i] != '\0')
 	{
 		str[i] = f(i, s[i]);
 		i++;

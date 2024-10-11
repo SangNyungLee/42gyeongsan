@@ -6,7 +6,7 @@
 /*   By: sanglee <sanglee@student.42gyeongsan.kr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 09:57:03 by sanglee           #+#    #+#             */
-/*   Updated: 2024/10/10 15:16:16 by sanglee          ###   ########.fr       */
+/*   Updated: 2024/10/11 14:29:57 by sanglee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,53 +15,32 @@
 #include <stdio.h>
 #include <string.h>
 
-char	*trim_left(char *s1, char *set)
+char	*trim_left(char const *s1, char const *set)
 {
-	char	*str;
-
-	str = ft_strdup((const char *)s1);
-	while (*str)
-	{
-		if (*str == *set)
-		{
-			str++;
-			set++;
-		}
-		else
-			break ;
-	}
-	return (str);
+	while (*s1 && ft_strchr(set, *s1))
+		s1++;
+	return (ft_strdup(s1));
 }
 
-char	*trim_right(char *s1, char *set)
+char	*trim_right(char *s1, char const *set)
 {
-	char	*str;
-	int		s1_len;
-	int		set_len;
+	int	len;
 
-	str = ft_strdup((const char *)s1);
-	s1_len = (int)ft_strlen(s1) - 1;
-	set_len = (int)ft_strlen(set) - 1;
-	while (s1_len >= 0 && set_len >= 0)
-	{
-		if (*(str + s1_len) == *(set + set_len))
-		{
-			s1_len--;
-			set_len--;
-		}
-		else
-			break ;
-	}
-	*(str + ++s1_len) = '\0';
-	return (str);
+	len = ft_strlen(s1);
+	while (len > 0 && ft_strchr(set, s1[len - 1]))
+		len--;
+	s1[len] = '\0';
+	return (s1);
 }
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	char	*str;
-	char	*new_set;
 
-	str = ft_strdup((const char *)s1);
-	new_set = (char *)set;
-	return (trim_right(trim_left(str, new_set), new_set));
+	if (!s1 || set)
+		return (NULL);
+	str = trim_left(s1, set);
+	if (str)
+		str = trim_right(str, set);
+	return (str);
 }
