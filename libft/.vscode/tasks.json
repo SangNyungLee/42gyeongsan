@@ -1,0 +1,90 @@
+{
+    "tasks": [
+        {
+            "type": "shell",
+            "label": "C/C++ Build",
+            "command": "/usr/bin/gcc",
+            "args": [
+                "-Wall",
+                "-Wextra",
+                "-Werror",
+                "-g",
+                "${file}",
+                "-o",
+                "${workspaceFolder}/${fileBasenameNoExtension}"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "detail": "C/C++ Build"
+        },
+        {
+            "type": "shell",
+            "label": "C/C++ Multi Build",
+            "command": "/usr/bin/gcc",
+            "args": [
+                "-Wall",
+                "-Wextra",
+                "-Werror",
+                "-g",
+                "${workspaceFolder}/*.c",
+                "-o",
+                "${workspaceFolder}/${fileBasenameNoExtension}"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "detail": "C/C++ Multi Build"
+        },
+        {
+            "type": "shell",
+            "label": "C/C++ Multi Build (lbsd)",
+            "command": "/usr/bin/gcc",
+            "args": [
+                "-Wall",
+                "-Wextra",
+                "-Werror",
+                "-g",
+                "${workspaceFolder}/*.c",
+                "-o",
+                "${workspaceFolder}/${fileBasenameNoExtension}",
+                "-lbsd"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "detail": "C/C++ Multi Build (lbsd)"
+        },
+        {
+            "type": "shell",
+            "label": "execute",
+            "command": "./${fileBasenameNoExtension}",
+            "group": {
+                "kind": "test",
+                "isDefault": true
+            }
+        },
+    ],
+    "version": "2.0.0"
+}

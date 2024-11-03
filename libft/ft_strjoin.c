@@ -15,7 +15,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-char	*ft_strcpy(char *dest, char *src)
+static char	*ft_strcpy(char *dest, char *src)
 {
 	int	i;
 
@@ -60,7 +60,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 		return (NULL);
 	i = ft_strlen((char *)s1);
 	j = ft_strlen((char *)s2);
-	ptr = malloc(sizeof(char) * (i + j));
+	ptr = malloc(sizeof(char) * (i + j + 1));
 	if (!ptr)
 		return (NULL);
 	ft_strcpy(ptr, (char *)s1);

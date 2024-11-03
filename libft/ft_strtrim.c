@@ -24,23 +24,30 @@ char	*trim_left(char const *s1, char const *set)
 
 char	*trim_right(char *s1, char const *set)
 {
-	int	len;
+	int		len;
+	char	*trimmed;
 
 	len = ft_strlen(s1);
 	while (len > 0 && ft_strchr(set, s1[len - 1]))
 		len--;
-	s1[len] = '\0';
-	return (s1);
+	trimmed = malloc(len + 1);
+	if (!trimmed)
+		return (NULL);
+	ft_strlcpy (trimmed, s1, len + 1);
+	return (trimmed);
 }
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	char	*str;
+	char	*trimmed;
 
-	if (!s1 || set)
+	if (!s1 || !set)
 		return (NULL);
 	str = trim_left(s1, set);
-	if (str)
-		str = trim_right(str, set);
-	return (str);
+	if (!str)
+		return (NULL);
+	trimmed = trim_right(str, set);
+	free(str);
+	return (trimmed);
 }

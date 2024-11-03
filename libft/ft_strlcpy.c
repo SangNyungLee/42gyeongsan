@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-int	check_len(char *str)
+static int	check_len(char *str)
 {
 	int		i;
 

@@ -19,10 +19,13 @@ char	*ft_strdup(const char *s)
 	char	*t;
 	int		len;
 
-	len = ft_strlen((char *)s);
-	if (!len)
+	if (!s)
 		return (NULL);
+	len = ft_strlen(s);
 	t = (char *)malloc(len + 1);
-	ft_memcpy(t, s, len + 1);
+	if (!t)
+		return (NULL);
+	ft_memcpy(t, s, len);
+	t[len] = '\0';
 	return (t);
 }
