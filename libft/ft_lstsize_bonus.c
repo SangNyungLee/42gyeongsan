@@ -6,7 +6,7 @@
 /*   By: sanglee <sanglee@student.42gyeongsan.kr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/03 21:43:18 by sanglee           #+#    #+#             */
-/*   Updated: 2024/11/04 16:30:51 by sanglee          ###   ########.fr       */
+/*   Updated: 2024/11/04 20:41:54 by sanglee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,19 +15,13 @@
 
 int	ft_lstsize(t_list *lst)
 {
-    int     i;
-    t_list  *temp;
+	int		i;
 
-    i = 0;
-    temp = lst;
-    if (!lst)
-        return (0);
-    while (temp->next)
-    {
-        i++;
-        temp = temp->next;
-    }
-    if (temp->next == NULL)
-        i++;
-    return (i);
+	i = 0;
+	while (lst)
+	{
+		lst = lst->next;
+		i++;
+	}
+	return (i);
 }

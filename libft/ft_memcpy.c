@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sanglee <sanglee@student.42gyeongsan.kr>   +#+  +:+       +#+        */
+/*   By: sanglee <sanglee@student.42gyeongsan.kr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/06 14:26:06 by sanglee           #+#    #+#             */
-/*   Updated: 2024/10/11 11:49:29 by sanglee          ###   ########.fr       */
+/*   Updated: 2024/11/04 19:40:58 by sanglee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,8 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	unsigned char	*cpy;
 	size_t			i;
 
+	if (!dest && !src && n > 0)
+		return (NULL);
 	des = (unsigned char *)dest;
 	cpy = (unsigned char *)src;
 	i = 0;

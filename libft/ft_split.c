@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sanglee <sanglee@student.42gyeongsan.kr>   +#+  +:+       +#+        */
+/*   By: sanglee <sanglee@student.42gyeongsan.kr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 11:22:29 by sanglee           #+#    #+#             */
-/*   Updated: 2024/10/10 16:14:16 by sanglee          ###   ########.fr       */
+/*   Updated: 2024/11/04 19:53:21 by sanglee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 #include <string.h>
 #include <stdlib.h>
 
-int	count_words(char *str, char c)
+static int	count_words(char *str, char c)
 {
 	int	i;
 	int	count;
@@ -36,7 +36,7 @@ int	count_words(char *str, char c)
 	return (count);
 }
 
-char	*extract_word(char *s, int *i, char c)
+static char	*extract_word(char *s, int *i, char c)
 {
 	char	*word;
 	int		start;
@@ -52,7 +52,7 @@ char	*extract_word(char *s, int *i, char c)
 	return (word);
 }
 
-void	free_memory(char **result, int idx)
+static void	free_memory(char **result, int idx)
 {
 	int	i;
 
