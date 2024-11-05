@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sanglee <sanglee@student.42gyeongsan.kr>   +#+  +:+       +#+        */
+/*   By: sanglee <sanglee@student.42gyeongsan.kr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 15:52:10 by sanglee           #+#    #+#             */
-/*   Updated: 2024/10/10 15:13:28 by sanglee          ###   ########.fr       */
+/*   Updated: 2024/11/05 13:50:38 by sanglee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ static char	*ft_strcpy(char *dest, char *src)
 	return (dest);
 }
 
-int	get_len(int n)
+static int	get_len(int n)
 {
 	int	len;
 
@@ -50,8 +50,6 @@ char	*check_str(char *str, int n, int len)
 		ft_strcpy(str, "-2147483648");
 		return (str);
 	}
-	if (n == 0)
-		str[0] = '0';
 	if (n == 0)
 		str[0] = '0';
 	if (n < 0)
