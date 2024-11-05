@@ -6,7 +6,7 @@
 /*   By: sanglee <sanglee@student.42gyeongsan.kr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 15:52:10 by sanglee           #+#    #+#             */
-/*   Updated: 2024/11/05 13:50:38 by sanglee          ###   ########.fr       */
+/*   Updated: 2024/11/05 15:19:13 by sanglee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ static int	get_len(int n)
 	return (len);
 }
 
-char	*check_str(char *str, int n, int len)
+static char	*check_str(char *str, int n, int len)
 {
 	if (n == -2147483648)
 	{

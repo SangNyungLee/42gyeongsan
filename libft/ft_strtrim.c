@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sanglee <sanglee@student.42gyeongsan.kr>   +#+  +:+       +#+        */
+/*   By: sanglee <sanglee@student.42gyeongsan.kr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 09:57:03 by sanglee           #+#    #+#             */
-/*   Updated: 2024/10/11 14:29:57 by sanglee          ###   ########.fr       */
+/*   Updated: 2024/11/05 15:15:59 by sanglee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,14 +15,14 @@
 #include <stdio.h>
 #include <string.h>
 
-char	*trim_left(char const *s1, char const *set)
+static char	*trim_left(char const *s1, char const *set)
 {
 	while (*s1 && ft_strchr(set, *s1))
 		s1++;
 	return (ft_strdup(s1));
 }
 
-char	*trim_right(char *s1, char const *set)
+static char	*trim_right(char *s1, char const *set)
 {
 	int		len;
 	char	*trimmed;

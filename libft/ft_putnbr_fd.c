@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sanglee <sanglee@student.42gyeongsan.kr>   +#+  +:+       +#+        */
+/*   By: sanglee <sanglee@student.42gyeongsan.kr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/10 14:44:40 by sanglee           #+#    #+#             */
-/*   Updated: 2024/10/11 13:46:52 by sanglee          ###   ########.fr       */
+/*   Updated: 2024/11/05 15:18:48 by sanglee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include <unistd.h>
 #include <stdio.h>
 
-void	change_num(char c, int fd)
+static void	change_num(char c, int fd)
 {
 	write(fd, &c, 1);
 }
