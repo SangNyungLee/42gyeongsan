@@ -18,7 +18,6 @@ ifdef BONUS
 	OBJS += $(BON_OBJS)
 endif
 NAME := libft.a
-.PHONY: clean fclean re all bonus
 all: $(NAME)
 bonus:
 	$(MAKE) BONUS=1 $(NAME)
@@ -31,3 +30,4 @@ clean:
 fclean: clean
 	rm -f $(NAME)
 re: fclean all
+.PHONY: clean fclean re all bonus

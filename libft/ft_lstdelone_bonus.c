@@ -6,7 +6,7 @@
 /*   By: sanglee <sanglee@student.42gyeongsan.kr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/03 21:43:10 by sanglee           #+#    #+#             */
-/*   Updated: 2024/11/04 19:18:38 by sanglee          ###   ########.fr       */
+/*   Updated: 2024/11/08 00:59:26 by sanglee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,8 @@
 
 void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
+	if (!del || !lst)
+		return ;
 	del(lst->content);
 	free(lst);
 }

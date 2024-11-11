@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sanglee <sanglee@student.42gyeongsan.kr>   +#+  +:+       +#+        */
+/*   By: sanglee <sanglee@student.42gyeongsan.kr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/06 14:30:49 by sanglee           #+#    #+#             */
-/*   Updated: 2024/10/11 12:15:53 by sanglee          ###   ########.fr       */
+/*   Updated: 2024/11/09 16:53:31 by sanglee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,8 +27,6 @@ char	*ft_strchr(const char *s, int c)
 		i++;
 	}
 	if (str[i] == (unsigned char)c)
-	{
 		return ((char *)str + i);
-	}
 	return (0);
 }

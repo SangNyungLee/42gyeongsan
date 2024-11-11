@@ -9,5 +9,6 @@
 		"types.h": "c",
 		"stdint.h": "c",
 		"printf.h": "c"
-	}
+	},
+	"makefile.configureOnOpen": false
 }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sanglee <sanglee@student.42gyeongsan.kr>   +#+  +:+       +#+        */
+/*   By: sanglee <sanglee@student.42gyeongsan.kr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/06 14:43:06 by sanglee           #+#    #+#             */
-/*   Updated: 2024/10/10 15:16:04 by sanglee          ###   ########.fr       */
+/*   Updated: 2024/11/09 16:53:06 by sanglee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,9 +25,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	{
 		i = 0;
 		while (j + i < len && little[i] && big[j + i] == little[i])
-		{
 			i++;
-		}
 		if (little[i] == '\0')
 			return ((char *)&big[j]);
 		j++;
