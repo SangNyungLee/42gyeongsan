@@ -6,7 +6,7 @@
 /*   By: sanglee <sanglee@student.42gyeongsan.kr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/10 17:09:38 by sanglee           #+#    #+#             */
-/*   Updated: 2024/11/11 12:10:13 by sanglee          ###   ########.fr       */
+/*   Updated: 2024/11/20 15:55:03 by sanglee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,11 +21,6 @@ static int	ft_hex(unsigned long num)
 
 	hex_digits = "0123456789abcdef";
 	i = 0;
-	if (num == 0)
-	{
-		write(1, "0x0", 1);
-		return (3);
-	}
 	while (num > 0)
 	{
 		hex[i] = hex_digits[num % 16];
