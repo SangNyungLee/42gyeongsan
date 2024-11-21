@@ -6,7 +6,7 @@
 /*   By: sanglee <sanglee@student.42gyeongsan.kr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/11 14:25:03 by sanglee           #+#    #+#             */
-/*   Updated: 2024/11/20 15:38:44 by sanglee          ###   ########.fr       */
+/*   Updated: 2024/11/21 12:24:04 by sanglee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,8 @@ int	init_buffer(int fd, char **buff, char **remainder)
 {
 	if (fd < 0 || BUFFER_SIZE <= 0)
 	{
-		free(*remainder);
+		if (*remainder)
+			free(*remainder);
 		return (0);
 	}
 	*buff = (char *)malloc((BUFFER_SIZE + 1) * sizeof(char));
